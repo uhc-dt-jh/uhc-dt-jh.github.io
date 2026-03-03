@@ -176,6 +176,7 @@
       container.innerHTML = reviews.map(r => {
         const color = starColor(r.rating);
         const versionBadge = r.version ? `<span class="version">v${escapeHtml(r.version)}</span>` : '';
+        const deviceBadge = r.device ? `<span class="version">${escapeHtml(r.device)}</span>` : '';
         const titleHtml = r.title ? `<div class="review-title">${escapeHtml(r.title)}</div>` : '';
         const date = (r.date || '').slice(0, 10);
         const author = escapeHtml(r.author || '익명');
@@ -185,6 +186,7 @@
           <div class="review-header">
             <span class="stars" style="color:${color}">${stars(r.rating)}</span>
             ${versionBadge}
+            ${deviceBadge}
             <span class="date">${date}</span>
           </div>
           ${titleHtml}
