@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>리뷰 모음 - STATION by UHC</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8f9fa;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .tab {
+      padding: 8px 20px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.15s;
+    }
+    .tab.active {
+      background: #1a1a1a;
+      color: #fff;
+      border-color: #1a1a1a;
+    }
+    .summary {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    .summary .avg-rating { font-weight: 600; color: #1a1a1a; }
+    .review-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+    .stars { font-size: 1rem; letter-spacing: 1px; }
+    .version {
+      background: #e5e7eb;
+      color: #374151;
+      font-size: 0.75rem;
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+    .date {
+      color: #9ca3af;
+      font-size: 0.8rem;
+      margin-left: auto;
+    }
+    .review-title { font-weight: 600; margin-bottom: 4px; }
+    .review-body {
+      font-size: 0.95rem;
+      color: #374151;
+      margin-bottom: 8px;
+      word-break: break-word;
+      white-space: pre-wrap;
+    }
+    .review-author { font-size: 0.8rem; color: #9ca3af; }
+    .footer {
+      text-align: center;
+      color: #9ca3af;
+      font-size: 0.8rem;
+      margin-top: 24px;
+    }
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: #9ca3af;
+    }
+    .error {
+      text-align: center;
+      padding: 40px;
+      color: #ef4444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>STATION 리뷰 모음</h1>
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('ios')">iOS</button>
+      <button class="tab" onclick="switchTab('android')">Android</button>
+    </div>
+    <div id="summary" class="summary"></div>
+    <div id="reviews"><div class="loading">리뷰를 불러오는 중...</div></div>
+    <div class="footer">STATION by UHC</div>
+  </div>
+  <script>
+    const DATA_BASE = 'https://uhc-dt-jh.github.io/data';
+    let currentTab = 'ios';
+    let cache = {};
+
+    function starColor(rating) {
+      if (rating >= 4) return '#22c55e';
+      if (rating === 3) return '#eab308';
+      return '#ef4444';
+    }
+
+    function stars(rating) {
+      return '\u2605'.repeat(rating) + '\u2606'.repeat(5 - rating);
+    }
+
+    function escapeHtml(str) {
+      const d = document.createElement('div');
+      d.textContent = str;
+      return d.innerHTML;
+    }
+
+    function renderReviews(reviews) {
+      const container = document.getElementById('reviews');
+      const summary = document.getElementById('summary');
+
+      if (!reviews || reviews.length === 0) {
+        container.innerHTML = '<div class="loading">리뷰 데이터가 없습니다.</div>';
+        summary.textContent = '';
+        return;
+      }
+
+      const total = reviews.length;
+      const avg = reviews.reduce((s, r) => s + r.rating, 0) / total;
+
+      summary.innerHTML = `총 <strong>${total}</strong>개 리뷰 &middot; 평균 <span class="avg-rating">${avg.toFixed(1)}</span>점`;
+
+      container.innerHTML = reviews.map(r => {
+        const color = starColor(r.rating);
+        const versionBadge = r.version ? `<span class="version">v${escapeHtml(r.version)}</span>` : '';
+        const titleHtml = r.title ? `<div class="review-title">${escapeHtml(r.title)}</div>` : '';
+        const date = (r.date || '').slice(0, 10);
+        const author = escapeHtml(r.author || '익명');
+        const body = escapeHtml(r.body || '');
+
+        return `<div class="review-card">
+          <div class="review-header">
+            <span class="stars" style="color:${color}">${stars(r.rating)}</span>
+            ${versionBadge}
+            <span class="date">${date}</span>
+          </div>
+          ${titleHtml}
+          <div class="review-body">${body}</div>
+          <div class="review-author">${author}</div>
+        </div>`;
+      }).join('');
+    }
+
+    async function loadReviews(platform) {
+      const container = document.getElementById('reviews');
+      if (cache[platform]) {
+        renderReviews(cache[platform]);
+        return;
+      }
+      container.innerHTML = '<div class="loading">리뷰를 불러오는 중...</div>';
+      try {
+        const resp = await fetch(`${DATA_BASE}/reviews_${platform}.json`);
+        if (!resp.ok) throw new Error(resp.status);
+        const data = await resp.json();
+        cache[platform] = data;
+        renderReviews(data);
+      } catch (e) {
+        container.innerHTML = '<div class="error">리뷰를 불러올 수 없습니다. 데이터가 아직 생성되지 않았을 수 있습니다.</div>';
+        document.getElementById('summary').textContent = '';
+      }
+    }
+
+    function switchTab(platform) {
+      currentTab = platform;
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      event.target.classList.add('active');
+      loadReviews(platform);
+    }
+
+    loadReviews('ios');
+  </script>
+</body>
+</html>
