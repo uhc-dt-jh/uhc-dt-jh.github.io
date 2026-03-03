@@ -88,6 +88,26 @@
       font-size: 0.8rem;
       margin-top: 24px;
     }
+    .sort-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .sort-btn {
+      padding: 5px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 0.8rem;
+      color: #374151;
+      transition: all 0.15s;
+    }
+    .sort-btn.active {
+      background: #374151;
+      color: #fff;
+      border-color: #374151;
+    }
     .loading {
       text-align: center;
       padding: 40px;
@@ -108,12 +128,18 @@
       <button class="tab" onclick="switchTab('android')">Android</button>
     </div>
     <div id="summary" class="summary"></div>
+    <div class="sort-bar">
+      <button class="sort-btn active" onclick="setSort('latest')">최신순</button>
+      <button class="sort-btn" onclick="setSort('rating-asc')">별점 낮은순</button>
+      <button class="sort-btn" onclick="setSort('rating-desc')">별점 높은순</button>
+    </div>
     <div id="reviews"><div class="loading">리뷰를 불러오는 중...</div></div>
     <div class="footer">STATION by UHC</div>
   </div>
   <script>
     const DATA_BASE = 'https://uhc-dt-jh.github.io/data';
     let currentTab = 'ios';
+    let currentSort = 'latest';
     let cache = {};
 
     function starColor(rating) {
@@ -168,10 +194,25 @@
       }).join('');
     }
 
+    function sortReviews(reviews) {
+      const sorted = [...reviews];
+      if (currentSort === 'rating-asc') sorted.sort((a, b) => a.rating - b.rating || b.date.localeCompare(a.date));
+      else if (currentSort === 'rating-desc') sorted.sort((a, b) => b.rating - a.rating || b.date.localeCompare(a.date));
+      else sorted.sort((a, b) => b.date.localeCompare(a.date));
+      return sorted;
+    }
+
+    function setSort(sort) {
+      currentSort = sort;
+      document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      if (cache[currentTab]) renderReviews(sortReviews(cache[currentTab]));
+    }
+
     async function loadReviews(platform) {
       const container = document.getElementById('reviews');
       if (cache[platform]) {
-        renderReviews(cache[platform]);
+        renderReviews(sortReviews(cache[platform]));
         return;
       }
       container.innerHTML = '<div class="loading">리뷰를 불러오는 중...</div>';
@@ -180,7 +221,7 @@
         if (!resp.ok) throw new Error(resp.status);
         const data = await resp.json();
         cache[platform] = data;
-        renderReviews(data);
+        renderReviews(sortReviews(data));
       } catch (e) {
         container.innerHTML = '<div class="error">리뷰를 불러올 수 없습니다. 데이터가 아직 생성되지 않았을 수 있습니다.</div>';
         document.getElementById('summary').textContent = '';
