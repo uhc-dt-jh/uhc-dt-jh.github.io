@@ -2,6 +2,15 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t전용 앱이라서 넘 편하고 좋아요~ 앱 디자인도 세련되고 예쁘네요ㅎㅎ",
+    "author": "GLOSS HAN",
+    "date": "2026-03-24T13:22:13",
+    "version": "",
+    "device": "Galaxy S23 FE"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t가성비 숙소 위치도 좋고 너무 깔끔하고 좋아요",
     "author": "Lovena러브나애나",
     "date": "2026-03-24T11:43:29",
@@ -61,14 +70,5 @@
     "date": "2026-03-19T11:48:06",
     "version": "1.4.6",
     "device": "Galaxy S21 5G"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t좋아용",
-    "author": "2",
-    "date": "2026-03-18T10:48:56",
-    "version": "1.4.6",
-    "device": "Galaxy S25"
   }
 ]
