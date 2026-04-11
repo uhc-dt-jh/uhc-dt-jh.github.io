@@ -1,6 +1,14 @@
 [
   {
     "rating": 5,
+    "title": "좋아요",
+    "body": "편리하네요",
+    "author": "패니0209",
+    "date": "2026-04-08T17:43:04-07:00",
+    "version": ""
+  },
+  {
+    "rating": 5,
     "title": "가족여행 최고의 선택",
     "body": "부모님 모시고 애기랑 다녀왔는데 음식도 해먹고 방도 많아서 너무 편하게 이용하고왔습니다!",
     "author": "옹비에요",
@@ -789,14 +797,6 @@
     "body": "친척들 모임 장소로 아주 좋았습니다\n이모들 연세가 다들 있으셔서 역과 터미널에서 매우 가까워서 지리적 이점이 가장 크네요",
     "author": "대령숙수1",
     "date": "2025-12-12T01:55:18-08:00",
-    "version": ""
-  },
-  {
-    "rating": 5,
-    "title": "Wow otel ev gibi",
-    "body": "Gerçekten evde gibi hissetim çok konforluydu 😌",
-    "author": "Trgirlll",
-    "date": "2025-12-11T19:28:59-08:00",
     "version": ""
   }
 ]
