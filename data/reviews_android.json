@@ -2,6 +2,33 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t정말 편하고 좋아요^^",
+    "author": "ironmindcoc",
+    "date": "2026-04-21T13:06:34",
+    "version": "1.4.12",
+    "device": "Galaxy S23"
+  },
+  {
+    "rating": 5,
+    "title": "",
+    "body": "\t오피스텔형 숙박업소인데 작지만 깔끔하고 깨끗해요",
+    "author": "seongsil Jeong",
+    "date": "2026-04-21T11:50:30",
+    "version": "1.4.12",
+    "device": "Galaxy S25 FE"
+  },
+  {
+    "rating": 5,
+    "title": "",
+    "body": "\t속초에 가면 매번 이용하는 uh더플랫 어플로도 할 수 있어서 너무 편리하고 좋습니다",
+    "author": "경이아빠",
+    "date": "2026-04-21T11:43:34",
+    "version": "1.4.12",
+    "device": "Galaxy S24"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t위치 숙소컨디션 모두 만족스러운 숙소였습니다!",
     "author": "홍성윤",
     "date": "2026-04-18T12:25:51",
@@ -43,23 +70,5 @@
     "date": "2026-04-14T13:22:56",
     "version": "1.4.11",
     "device": "Galaxy A52s 5G"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\tUH 플랫더속초에서 1박했는데 깨끗하고 저렴한 가격에 만족했어요. 속초중앙시장이 5분거리라 편리했구요.",
-    "author": "Hyun-Jin Hong",
-    "date": "2026-04-14T12:20:06",
-    "version": "1.4.11",
-    "device": "Galaxy S25"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t속초 여행가서 숙소 업글 받았어요 만족합니다",
-    "author": "Dongun Jeong",
-    "date": "2026-04-13T16:25:28",
-    "version": "1.4.11",
-    "device": "Galaxy S25+"
   }
 ]
