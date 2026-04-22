@@ -2,6 +2,51 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t편리해요",
+    "author": "흰둥이알투",
+    "date": "2026-04-22T12:28:50",
+    "version": "1.4.12",
+    "device": "Galaxy S26"
+  },
+  {
+    "rating": 5,
+    "title": "",
+    "body": "\t깔끔하고 편리하네요!",
+    "author": "최석용",
+    "date": "2026-04-22T12:11:35",
+    "version": "1.4.12",
+    "device": "Galaxy S20 FE 5G"
+  },
+  {
+    "rating": 5,
+    "title": "",
+    "body": "\t한눈에볼수있어 편하네요! 숙소깨끗하고 너무편안하게 하루보내고왔습니다.",
+    "author": "천경화",
+    "date": "2026-04-22T12:00:56",
+    "version": "1.4.12",
+    "device": "Galaxy S22+"
+  },
+  {
+    "rating": 5,
+    "title": "",
+    "body": "\t앱이잘보이게잘정돈되있네요",
+    "author": "김소연",
+    "date": "2026-04-22T11:46:49",
+    "version": "1.4.12",
+    "device": "Galaxy Z Flip7"
+  },
+  {
+    "rating": 3,
+    "title": "",
+    "body": "\t사용이 편리해요",
+    "author": "Goo gle",
+    "date": "2026-04-22T11:44:41",
+    "version": "1.4.12",
+    "device": "Redmi Note 13 Pro 5G"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t정말 편하고 좋아요^^",
     "author": "ironmindcoc",
     "date": "2026-04-21T13:06:34",
@@ -43,32 +88,5 @@
     "date": "2026-04-16T17:48:49",
     "version": "1.4.11",
     "device": "Galaxy S23"
-  },
-  {
-    "rating": 1,
-    "title": "",
-    "body": "\tApp is super aggressive with permissions. Wants your information. Look at APP permissions before you download. It has no need to have access to what it is requesting. 10/10 recommend booking thru a different means. 0 trust. 1st comment in a year is extra suspicious!",
-    "author": "xFateLikeDeath x",
-    "date": "2026-04-15T06:53:12",
-    "version": "1.4.11",
-    "device": "Galaxy S23 Ultra"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t속초 다녀왔는데 숙소컨디션 끝장나게 좋아요 애들있는집은 호텔가느니 여기가 훨싼 낫슴다!!",
-    "author": "삼팔승",
-    "date": "2026-04-14T17:38:09",
-    "version": "1.4.11",
-    "device": "Galaxy S24 Ultra"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t지난 여름에 부산점을 이용했을때 가성비있고 깨끗한 숙소가 마음에 들었습니다. UH 플랫이라는 이름을 그때부터 어렴풋이 기억하다가 우연히 송도점을 이용하게 됐고 마찬가지로 만족감이 높은 여행이 되었습니다. 이제 이 브랜드 호텔은 믿고 갈 수 있겠네요ㅎㅎㅎ앱도 깔끔하니 잘 활용해보겠습니다.",
-    "author": "김팃티",
-    "date": "2026-04-14T13:22:56",
-    "version": "1.4.11",
-    "device": "Galaxy A52s 5G"
   }
 ]
