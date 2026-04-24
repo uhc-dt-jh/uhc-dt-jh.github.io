@@ -2,6 +2,15 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t숙소컨디션이 너무좋구 서비스가좋아요!! 침구도편하구 강추입니다~!",
+    "author": "차설희",
+    "date": "2026-04-23T20:20:34",
+    "version": "1.4.12",
+    "device": "Galaxy Z Fold7"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t편안하고 깨끗합니다 정말 좋은 숙소에요",
     "author": "Seohyun Park",
     "date": "2026-04-23T09:54:46",
@@ -88,14 +97,5 @@
     "date": "2026-04-18T12:25:51",
     "version": "",
     "device": "Galaxy S25"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t전용앱으로 최저가 예약 최고 입니다. 예약내역 실시간 확인 가능하고 사용 후 예약바우처도 받을 수 있어요.",
-    "author": "Bailey.Byoungsook Rho",
-    "date": "2026-04-16T17:48:49",
-    "version": "1.4.11",
-    "device": "Galaxy S23"
   }
 ]
