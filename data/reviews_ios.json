@@ -1,6 +1,38 @@
 [
   {
     "rating": 5,
+    "title": "앱 리뷰",
+    "body": "괜찮은 앱이에요 자주 숙박할 때 사용합니다",
+    "author": "쏘냥도루",
+    "date": "2026-05-05T07:41:21-07:00",
+    "version": ""
+  },
+  {
+    "rating": 5,
+    "title": "숙소도 좋은데 어플도 있어서 편리해요!",
+    "body": "어플 사용하기에도 편리해요 ദ്ദി*ˊᗜˋ*)ᵍᵒᵒᵈ",
+    "author": "오오오이이이이ㅣㅇ으응",
+    "date": "2026-05-05T02:14:55-07:00",
+    "version": ""
+  },
+  {
+    "rating": 5,
+    "title": "깔끔하고 편안한 가성비 숙소",
+    "body": "속초 여행으로 이 숙소에서 지냈는데 좋은 뷰와 여행 내내 편안함을 느꼈고 서비스도 좋았습니다!!",
+    "author": "cjhbx56",
+    "date": "2026-05-04T19:54:54-07:00",
+    "version": ""
+  },
+  {
+    "rating": 5,
+    "title": "최고의 숙소",
+    "body": "UH시그니처플랫대구에서 하루를 보냈습니다. 깔끔한 시설에 가족들 모두 만족하고 왔습니다~",
+    "author": "bangsu3000",
+    "date": "2026-05-04T19:19:23-07:00",
+    "version": ""
+  },
+  {
+    "rating": 5,
     "title": "Had a pleasant experience",
     "body": "I had a pleasant experience at the UH flat Daegu. \nResy was straightforward and the property was well maintained",
     "author": "Rialovey",
@@ -765,38 +797,6 @@
     "body": "직원분들도 너무친절하고\n룸컨디션도조앗어여\n무엇보다 시장과가까워서\n굿굿",
     "author": "00123ga",
     "date": "2025-12-21T19:40:15-08:00",
-    "version": ""
-  },
-  {
-    "rating": 3,
-    "title": "UH flat c- type 이용",
-    "body": "속초 UH flat c-type 이용해봤는데 넘 아늑하고 좋더라구요. 필요한 물품들은 모두 구비되어 있고, 시설도 깔끔하고 좋았습니다. 재방문 의사 있습니다. ^^",
-    "author": "마이다스의 손발",
-    "date": "2025-12-21T00:12:58-08:00",
-    "version": ""
-  },
-  {
-    "rating": 5,
-    "title": "속초 오션뷰 숙소로 추천",
-    "body": "겨울 바다보러간 속초여행 숙소로 다녀왔습니다. 방과 거실이 분리되어있는 룸으로 예약했는데, 속초시장에서 사온 음식들을 먹기 편했습니다. 오션뷰도 멋졌습니다. 앞에 가리는 것 없이 탁트인 바다를 보니 너무 행복했습니다. 난방도 잘 되어서 잠도 잘 잤습니다. 지하주차장도 여유롭고 근처 관광지도 가까워서 속초여행 숙소로 추천합니다.",
-    "author": "타미홍",
-    "date": "2025-12-19T21:00:36-08:00",
-    "version": ""
-  },
-  {
-    "rating": 5,
-    "title": "UH Flat 시그니처 대구",
-    "body": "대구 출장시 마다 이용한 UH Flat 고급스럽고 넓은 공간과 편안함까지 너무 좋아요",
-    "author": "chaos7204",
-    "date": "2025-12-19T18:49:05-08:00",
-    "version": ""
-  },
-  {
-    "rating": 5,
-    "title": "UHC플랫 추천합니다",
-    "body": "가성비 여행 숙소로 좋아요",
-    "author": "Jinyoung Rhee",
-    "date": "2025-12-18T21:49:11-08:00",
     "version": ""
   }
 ]
