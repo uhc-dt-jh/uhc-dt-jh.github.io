@@ -2,6 +2,15 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t전용앱 좋아요^^~",
+    "author": "김석기",
+    "date": "2026-05-07T18:26:39",
+    "version": "1.4.14",
+    "device": "Galaxy M15 5G"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t편하게 잘 이용했어요.",
     "author": "Hyeonwoo Song",
     "date": "2026-05-05T12:34:00",
@@ -42,7 +51,7 @@
     "author": "Kim",
     "date": "2026-05-02T12:35:23",
     "version": "1.4.12",
-    "device": "Galaxy F15 5G"
+    "device": "Galaxy M15 5G"
   },
   {
     "rating": 5,
