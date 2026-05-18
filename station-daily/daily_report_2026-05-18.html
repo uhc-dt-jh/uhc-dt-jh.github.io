@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STATION Daily Report · 2026.05.18 (월)</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-soft: #fafafa;
+  --border: #ececec;
+  --border-strong: #111111;
+  --text: #111111;
+  --text-secondary: #6b6b6b;
+  --text-muted: #b5b5b5;
+  --accent: #6f5fff;
+  --accent-soft: #f3f0ff;
+}
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
+  font-feature-settings: 'ss01', 'tnum';
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 56px 96px;
+}
+
+/* TOP BAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  margin-bottom: 80px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.brand-mark {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: #111;
+  border-radius: 4px;
+  position: relative;
+}
+.brand-mark::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1.5px solid #fff;
+  border-radius: 2px;
+}
+.brand-text { color: var(--text); }
+.brand-sep { color: var(--text-muted); }
+.brand-sub { color: var(--text-secondary); letter-spacing: 0.15em; }
+.last-sync {
+  font-size: 11px;
+  color: var(--text-secondary);
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+.last-sync::before {
+  content: '●';
+  color: var(--accent);
+  margin-right: 8px;
+  font-size: 7px;
+  vertical-align: middle;
+}
+
+/* HERO */
+.hero { margin-bottom: 64px; }
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text);
+}
+h1 .dot { color: var(--accent); }
+.hero-sub {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+/* META BAR */
+.meta-bar {
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 28px 0;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+.meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.meta-label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.meta-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+/* KPI */
+.kpi-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 72px;
+}
+.kpi-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px 36px;
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+.kpi-primary {
+  background: var(--accent-soft);
+  border-color: transparent;
+}
+.kpi-tag {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.kpi-value {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.kpi-primary .kpi-value { font-size: 56px; }
+.kpi-meta {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* SECTION */
+.section { margin-bottom: 56px; }
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 18px;
+  padding: 0 4px;
+}
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.section-tag {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+.pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--border-strong);
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+}
+
+/* TABLE */
+.table-wrap {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow-x: auto;
+  background: var(--surface);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th, td {
+  text-align: right;
+  padding: 16px 20px;
+  white-space: nowrap;
+}
+thead th {
+  font-weight: 500;
+  font-size: 11px;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--border);
+  padding-top: 20px;
+  padding-bottom: 16px;
+  background: var(--surface-soft);
+}
+thead th:first-child { background: var(--surface-soft); }
+thead th.future { color: var(--text-muted); }
+tbody tr + tr td, tbody tr + tr .row-label {
+  border-top: 1px solid var(--border);
+}
+.row-label {
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 13px;
+  letter-spacing: 0.01em;
+}
+td {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+td .unit {
+  color: var(--text-muted);
+  margin-left: 8px;
+  font-size: 12px;
+}
+td.empty, td.future-cell { color: var(--text-muted); }
+
+/* FOOTER */
+.footer {
+  margin-top: 96px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+}
+.footer-mark {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  main { padding: 24px 24px 64px; }
+  .topbar { margin-bottom: 48px; }
+  h1 { font-size: 32px; }
+  .meta-bar {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0;
+    margin-bottom: 40px;
+  }
+  .kpi-row {
+    grid-template-columns: 1fr;
+    margin-bottom: 48px;
+  }
+  .kpi-value { font-size: 40px; }
+  .kpi-primary .kpi-value { font-size: 44px; }
+  .kpi-card { padding: 24px; }
+  h2 { font-size: 22px; }
+  th, td { padding: 12px 14px; font-size: 13px; }
+}
+</style>
+</head>
+<body>
+  <main>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-text">STATION</span>
+        <span class="brand-sep">·</span>
+        <span class="brand-sub">DAILY REPORT</span>
+      </div>
+      <div class="last-sync">LAST SYNC 2026.05.18 (월)</div>
+    </header>
+
+    <section class="hero">
+      <h1>Daily Report<span class="dot">.</span></h1>
+      <p class="hero-sub">5월 3주차 · 1/7일 누적</p>
+    </section>
+
+    <section class="meta-bar">
+      <div class="meta-col">
+        <div class="meta-label">PERIOD</div>
+        <div class="meta-value">5/17 – 5/23</div>
+      </div>
+      <div class="meta-col">
+        <div class="meta-label">WEEK</div>
+        <div class="meta-value">5월 3주차</div>
+      </div>
+      <div class="meta-col">
+        <div class="meta-label">REVENUE</div>
+        <div class="meta-value">₩2,381,559</div>
+      </div>
+      <div class="meta-col">
+        <div class="meta-label">TRANSACTIONS</div>
+        <div class="meta-value">11</div>
+      </div>
+      <div class="meta-col">
+        <div class="meta-label">PLATFORMS</div>
+        <div class="meta-value">iOS · Android</div>
+      </div>
+    </section>
+
+    <section class="kpi-row">
+      <div class="kpi-card kpi-primary">
+        <div class="kpi-tag">REVENUE</div>
+        <div class="kpi-value">₩2,381,559</div>
+        <div class="kpi-meta">11건 · 5월 3주차 누적</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-tag">iOS · DAU TOTAL</div>
+        <div class="kpi-value">498</div>
+        <div class="kpi-meta">첫 실행 216</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-tag">ANDROID · DAU TOTAL</div>
+        <div class="kpi-value">373</div>
+        <div class="kpi-meta">첫 실행 163</div>
+      </div>
+    </section>
+
+    
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>iOS</h2>
+          <span class="pill">v1.4.13</span>
+        </div>
+        <div class="section-tag">PLATFORM</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th class="">5/17</th><th class="future">5/18</th><th class="future">5/19</th><th class="future">5/20</th><th class="future">5/21</th><th class="future">5/22</th><th class="future">5/23</th></tr></thead>
+          <tbody><tr><th class="row-label">DAU</th><td class="">498</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">크래시율</th><td class="">0.20%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">영향 사용자</th><td class="">1</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">평점</th><td class="">4.9<span class='unit'>· 516</span></td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">첫 실행</th><td class="">216</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    
+    
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Android</h2>
+          <span class="pill">v1.4.16</span>
+        </div>
+        <div class="section-tag">PLATFORM</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th class="">5/17</th><th class="future">5/18</th><th class="future">5/19</th><th class="future">5/20</th><th class="future">5/21</th><th class="future">5/22</th><th class="future">5/23</th></tr></thead>
+          <tbody><tr><th class="row-label">DAU</th><td class="">373</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">크래시율</th><td class="">0.24%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">영향 사용자</th><td class="">1</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">평점</th><td class="">5.0<span class='unit'>· 822</span></td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">첫 실행</th><td class="">163</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    
+    
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Revenue</h2>
+        </div>
+        <div class="section-tag">SALES</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th class="">5/17</th><th class="future">5/18</th><th class="future">5/19</th><th class="future">5/20</th><th class="future">5/21</th><th class="future">5/22</th><th class="future">5/23</th></tr></thead>
+          <tbody><tr><th class="row-label">총예약 (건)</th><td class="">11</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">총예약 (원)</th><td class="">2,381,559</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">취소 (건)</th><td class="">0</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">취소 (원)</th><td class="">0</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">링크페이 (건)</th><td class="">0</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">링크페이 (원)</th><td class="">0</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">총매출 (건)</th><td class="">11</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">총매출 (원)</th><td class="">2,381,559</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    
+
+    <footer class="footer">
+      <span class="footer-mark"></span>
+      Generated · 2026.05.18 (월)
+    </footer>
+  </main>
+</body>
+</html>
