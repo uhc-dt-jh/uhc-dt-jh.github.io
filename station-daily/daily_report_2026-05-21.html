@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STATION Daily Report · 2026.05.21 (목)</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-soft: #fafafa;
+  --border: #ececec;
+  --border-strong: #111111;
+  --text: #111111;
+  --text-secondary: #6b6b6b;
+  --text-muted: #b5b5b5;
+  --accent: #6f5fff;
+  --accent-soft: #f3f0ff;
+  --up: #16a34a;
+  --down: #dc2626;
+}
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
+  font-feature-settings: 'ss01', 'tnum';
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 56px 96px;
+}
+
+/* TOP BAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  margin-bottom: 80px;
+}
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.brand-mark {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: #111;
+  border-radius: 4px;
+  position: relative;
+}
+.brand-mark::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1.5px solid #fff;
+  border-radius: 2px;
+}
+.brand-text { color: var(--text); }
+.brand-sep { color: var(--text-muted); }
+.brand-sub { color: var(--text-secondary); letter-spacing: 0.15em; }
+.last-sync {
+  font-size: 11px;
+  color: var(--text-secondary);
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+.last-sync::before {
+  content: '●';
+  color: var(--accent);
+  margin-right: 8px;
+  font-size: 7px;
+  vertical-align: middle;
+}
+
+/* VS TOGGLE BUTTON */
+.vs-toggle {
+  background: var(--text);
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+.vs-toggle:hover { background: #333; }
+.vs-toggle.active {
+  background: var(--accent);
+}
+
+/* HERO */
+.hero { margin-bottom: 64px; }
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text);
+}
+h1 .dot { color: var(--accent); }
+.hero-sub {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+/* META BAR */
+.meta-bar {
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 28px 0;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+.meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.meta-label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.meta-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+/* KPI */
+.kpi-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 72px;
+}
+.kpi-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px 36px;
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+.kpi-primary {
+  background: var(--accent-soft);
+  border-color: transparent;
+}
+.kpi-tag {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.kpi-value {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.kpi-primary .kpi-value { font-size: 56px; }
+.kpi-meta {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* SECTION */
+.section { margin-bottom: 56px; }
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 18px;
+  padding: 0 4px;
+}
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.section-tag {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+.pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--border-strong);
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+}
+
+/* CHART */
+.chart-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px 36px;
+}
+.chart-block { margin-bottom: 28px; }
+.chart-block:last-child { margin-bottom: 0; }
+.chart-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.sparkline {
+  width: 100%;
+  height: 180px;
+  display: block;
+}
+.chart-axis-label {
+  font-size: 10px;
+  fill: var(--text-muted);
+  font-family: inherit;
+  letter-spacing: 0.05em;
+}
+.empty-chart {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+.sparkline {
+  cursor: crosshair;
+}
+.hover-guide, .hover-dot {
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+}
+
+/* CHART TOOLTIP */
+.chart-tooltip {
+  position: fixed;
+  display: none;
+  pointer-events: none;
+  z-index: 100;
+  background: var(--text);
+  color: white;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  white-space: nowrap;
+  min-width: 120px;
+}
+.chart-tooltip .tt-label {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+.chart-tooltip .tt-date {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+  letter-spacing: 0.05em;
+}
+.chart-tooltip .tt-value {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* TABLE */
+.table-wrap {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow-x: auto;
+  background: var(--surface);
+}
+.section-note {
+  margin-top: 14px;
+  padding: 12px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-soft);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+.section-note-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.section-note-value {
+  color: var(--text);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th, td {
+  text-align: right;
+  padding: 16px 20px;
+  white-space: nowrap;
+}
+thead th {
+  font-weight: 500;
+  font-size: 11px;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--border);
+  padding-top: 20px;
+  padding-bottom: 16px;
+  background: var(--surface-soft);
+}
+thead th.future { color: var(--text-muted); }
+tbody tr + tr td, tbody tr + tr .row-label {
+  border-top: 1px solid var(--border);
+}
+.row-label {
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 13px;
+  letter-spacing: 0.01em;
+}
+tr.derived .row-label,
+tr.derived td {
+  background: var(--surface-soft);
+  font-weight: 500;
+}
+tr.derived td { color: var(--text); }
+td {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+td .unit {
+  color: var(--text-muted);
+  margin-left: 8px;
+  font-size: 12px;
+}
+td.empty, td.future-cell { color: var(--text-muted); }
+
+/* VS PREV (전주 비교) */
+.vs-prev {
+  display: none;
+  margin-left: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+.show-vs-prev .vs-prev { display: inline-block; }
+.vs-prev.up { color: var(--up); }
+.vs-prev.down { color: var(--down); }
+.vs-prev.flat { color: var(--text-muted); }
+
+/* meta-bar/kpi-meta vs-prev은 약간 더 큼 */
+.meta-value .vs-prev,
+.kpi-meta .vs-prev {
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 96px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+}
+.footer-mark {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  main { padding: 24px 24px 64px; }
+  .topbar { margin-bottom: 48px; flex-wrap: wrap; gap: 12px; }
+  .topbar-right { gap: 12px; }
+  h1 { font-size: 32px; }
+  .meta-bar {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0;
+    margin-bottom: 40px;
+  }
+  .kpi-row {
+    grid-template-columns: 1fr;
+    margin-bottom: 48px;
+  }
+  .kpi-value { font-size: 40px; }
+  .kpi-primary .kpi-value { font-size: 44px; }
+  .kpi-card { padding: 24px; }
+  h2 { font-size: 22px; }
+  th, td { padding: 12px 14px; font-size: 13px; }
+  .chart-wrap { padding: 20px; }
+}
+</style>
+</head>
+<body>
+  <main>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-text">STATION</span>
+        <span class="brand-sep">·</span>
+        <span class="brand-sub">DAILY REPORT</span>
+      </div>
+      <div class="topbar-right">
+        <button class="vs-toggle" type="button">전주와 비교</button>
+        <div class="last-sync">LAST SYNC 2026.05.21 (목)</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Daily Report<span class="dot">.</span></h1>
+      <p class="hero-sub">5월 3주차 · 4/7일 누적</p>
+    </section>
+
+    <section class="meta-bar">
+      <div class="meta-col">
+        <div class="meta-label">PERIOD</div>
+        <div class="meta-value">5/17 – 5/23</div>
+      </div>
+      <div class="meta-col">
+        <div class="meta-label">WEEK</div>
+        <div class="meta-value">5월 3주차</div>
+      </div>
+      <div class="meta-col">
+        <div class="meta-label">REVENUE</div>
+        <div class="meta-value">₩17,413,826<span class="vs-prev up">▲4%</span></div>
+      </div>
+      <div class="meta-col">
+        <div class="meta-label">TRANSACTIONS</div>
+        <div class="meta-value">61</div>
+      </div>
+      <div class="meta-col">
+        <div class="meta-label">PLATFORMS</div>
+        <div class="meta-value">iOS · Android</div>
+      </div>
+    </section>
+
+    <section class="kpi-row">
+      <div class="kpi-card kpi-primary">
+        <div class="kpi-tag">REVENUE</div>
+        <div class="kpi-value">₩17,413,826</div>
+        <div class="kpi-meta">61건 · 5월 3주차 누적<span class="vs-prev up">▲4%</span></div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-tag">iOS · DAU TOTAL</div>
+        <div class="kpi-value">2,078</div>
+        <div class="kpi-meta">첫 실행 914</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-tag">ANDROID · DAU TOTAL</div>
+        <div class="kpi-value">1,516</div>
+        <div class="kpi-meta">첫 실행 667</div>
+      </div>
+    </section>
+
+    
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title"><h2>최근 28일 추세</h2></div>
+        <div class="section-tag">TREND · LAST 28 DAYS</div>
+      </div>
+      <div class="chart-wrap">
+        <div class="chart-block">
+          <div class="chart-label">TOTAL DAU (iOS + Android)</div>
+          <svg viewBox="0 0 1100 180" preserveAspectRatio="none" class="sparkline" data-points="[{&quot;x&quot;: 20.0, &quot;y&quot;: 25.0, &quot;date&quot;: &quot;4/23&quot;, &quot;value&quot;: &quot;892&quot;}, {&quot;x&quot;: 59.3, &quot;y&quot;: 23.7, &quot;date&quot;: &quot;4/24&quot;, &quot;value&quot;: &quot;901&quot;}, {&quot;x&quot;: 98.5, &quot;y&quot;: 38.1, &quot;date&quot;: &quot;4/25&quot;, &quot;value&quot;: &quot;797&quot;}, {&quot;x&quot;: 137.8, &quot;y&quot;: 24.4, &quot;date&quot;: &quot;4/26&quot;, &quot;value&quot;: &quot;896&quot;}, {&quot;x&quot;: 177.0, &quot;y&quot;: 23.6, &quot;date&quot;: &quot;4/27&quot;, &quot;value&quot;: &quot;902&quot;}, {&quot;x&quot;: 216.3, &quot;y&quot;: 23.7, &quot;date&quot;: &quot;4/28&quot;, &quot;value&quot;: &quot;901&quot;}, {&quot;x&quot;: 255.6, &quot;y&quot;: 16.4, &quot;date&quot;: &quot;4/29&quot;, &quot;value&quot;: &quot;954&quot;}, {&quot;x&quot;: 294.8, &quot;y&quot;: 27.0, &quot;date&quot;: &quot;4/30&quot;, &quot;value&quot;: &quot;877&quot;}, {&quot;x&quot;: 334.1, &quot;y&quot;: 28.0, &quot;date&quot;: &quot;5/1&quot;, &quot;value&quot;: &quot;870&quot;}, {&quot;x&quot;: 373.3, &quot;y&quot;: 36.4, &quot;date&quot;: &quot;5/2&quot;, &quot;value&quot;: &quot;809&quot;}, {&quot;x&quot;: 412.6, &quot;y&quot;: 28.0, &quot;date&quot;: &quot;5/3&quot;, &quot;value&quot;: &quot;870&quot;}, {&quot;x&quot;: 451.9, &quot;y&quot;: 33.1, &quot;date&quot;: &quot;5/4&quot;, &quot;value&quot;: &quot;833&quot;}, {&quot;x&quot;: 491.1, &quot;y&quot;: 38.5, &quot;date&quot;: &quot;5/5&quot;, &quot;value&quot;: &quot;794&quot;}, {&quot;x&quot;: 530.4, &quot;y&quot;: 25.7, &quot;date&quot;: &quot;5/6&quot;, &quot;value&quot;: &quot;887&quot;}, {&quot;x&quot;: 569.6, &quot;y&quot;: 39.3, &quot;date&quot;: &quot;5/7&quot;, &quot;value&quot;: &quot;788&quot;}, {&quot;x&quot;: 608.9, &quot;y&quot;: 16.0, &quot;date&quot;: &quot;5/8&quot;, &quot;value&quot;: &quot;957&quot;}, {&quot;x&quot;: 648.1, &quot;y&quot;: 36.6, &quot;date&quot;: &quot;5/9&quot;, &quot;value&quot;: &quot;808&quot;}, {&quot;x&quot;: 687.4, &quot;y&quot;: 23.4, &quot;date&quot;: &quot;5/10&quot;, &quot;value&quot;: &quot;903&quot;}, {&quot;x&quot;: 726.7, &quot;y&quot;: 27.9, &quot;date&quot;: &quot;5/11&quot;, &quot;value&quot;: &quot;871&quot;}, {&quot;x&quot;: 765.9, &quot;y&quot;: 20.4, &quot;date&quot;: &quot;5/12&quot;, &quot;value&quot;: &quot;925&quot;}, {&quot;x&quot;: 805.2, &quot;y&quot;: 33.2, &quot;date&quot;: &quot;5/13&quot;, &quot;value&quot;: &quot;832&quot;}, {&quot;x&quot;: 844.4, &quot;y&quot;: 21.4, &quot;date&quot;: &quot;5/14&quot;, &quot;value&quot;: &quot;918&quot;}, {&quot;x&quot;: 883.7, &quot;y&quot;: 27.0, &quot;date&quot;: &quot;5/15&quot;, &quot;value&quot;: &quot;877&quot;}, {&quot;x&quot;: 923.0, &quot;y&quot;: 49.0, &quot;date&quot;: &quot;5/16&quot;, &quot;value&quot;: &quot;718&quot;}, {&quot;x&quot;: 962.2, &quot;y&quot;: 27.3, &quot;date&quot;: &quot;5/17&quot;, &quot;value&quot;: &quot;875&quot;}, {&quot;x&quot;: 1001.5, &quot;y&quot;: 20.8, &quot;date&quot;: &quot;5/18&quot;, &quot;value&quot;: &quot;922&quot;}, {&quot;x&quot;: 1040.7, &quot;y&quot;: 25.7, &quot;date&quot;: &quot;5/19&quot;, &quot;value&quot;: &quot;887&quot;}, {&quot;x&quot;: 1080.0, &quot;y&quot;: 22.5, &quot;date&quot;: &quot;5/20&quot;, &quot;value&quot;: &quot;910&quot;}]" data-label="Total DAU" data-color="#111"><path d="M 20.0,25.0 L 59.3,23.7 L 98.5,38.1 L 137.8,24.4 L 177.0,23.6 L 216.3,23.7 L 255.6,16.4 L 294.8,27.0 L 334.1,28.0 L 373.3,36.4 L 412.6,28.0 L 451.9,33.1 L 491.1,38.5 L 530.4,25.7 L 569.6,39.3 L 608.9,16.0 L 648.1,36.6 L 687.4,23.4 L 726.7,27.9 L 765.9,20.4 L 805.2,33.2 L 844.4,21.4 L 883.7,27.0 L 923.0,49.0 L 962.2,27.3 L 1001.5,20.8 L 1040.7,25.7 L 1080.0,22.5 L 1080.0,148.0 L 20.0,148.0 Z" fill="#111" fill-opacity="0.06"/><path d="M 20.0,25.0 L 59.3,23.7 L 98.5,38.1 L 137.8,24.4 L 177.0,23.6 L 216.3,23.7 L 255.6,16.4 L 294.8,27.0 L 334.1,28.0 L 373.3,36.4 L 412.6,28.0 L 451.9,33.1 L 491.1,38.5 L 530.4,25.7 L 569.6,39.3 L 608.9,16.0 L 648.1,36.6 L 687.4,23.4 L 726.7,27.9 L 765.9,20.4 L 805.2,33.2 L 844.4,21.4 L 883.7,27.0 L 923.0,49.0 L 962.2,27.3 L 1001.5,20.8 L 1040.7,25.7 L 1080.0,22.5" fill="none" stroke="#111" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1080.0" cy="22.5" r="4" fill="#111"/><line class="hover-guide" x1="0" x2="0" y1="16" y2="148" stroke="#111" stroke-width="1" stroke-dasharray="3,3" opacity="0"/><circle class="hover-dot" cx="0" cy="0" r="5" fill="#111" stroke="white" stroke-width="2" opacity="0"/><text x="20.0" y="172" text-anchor="middle" class="chart-axis-label">4/23</text><text x="569.6" y="172" text-anchor="middle" class="chart-axis-label">5/7</text><text x="1080.0" y="172" text-anchor="middle" class="chart-axis-label">5/20</text><text x="20" y="16" class="chart-axis-label">max 957</text></svg>
+        </div>
+        <div class="chart-block">
+          <div class="chart-label">REVENUE (₩)</div>
+          <svg viewBox="0 0 1100 180" preserveAspectRatio="none" class="sparkline" data-points="[{&quot;x&quot;: 20.0, &quot;y&quot;: 120.5, &quot;date&quot;: &quot;4/23&quot;, &quot;value&quot;: &quot;₩2,745,811&quot;}, {&quot;x&quot;: 59.3, &quot;y&quot;: 106.0, &quot;date&quot;: &quot;4/24&quot;, &quot;value&quot;: &quot;₩4,195,189&quot;}, {&quot;x&quot;: 98.5, &quot;y&quot;: 93.7, &quot;date&quot;: &quot;4/25&quot;, &quot;value&quot;: &quot;₩5,418,756&quot;}, {&quot;x&quot;: 137.8, &quot;y&quot;: 112.6, &quot;date&quot;: &quot;4/26&quot;, &quot;value&quot;: &quot;₩3,532,454&quot;}, {&quot;x&quot;: 177.0, &quot;y&quot;: 16.0, &quot;date&quot;: &quot;4/27&quot;, &quot;value&quot;: &quot;₩13,176,246&quot;}, {&quot;x&quot;: 216.3, &quot;y&quot;: 143.3, &quot;date&quot;: &quot;4/28&quot;, &quot;value&quot;: &quot;₩471,200&quot;}, {&quot;x&quot;: 255.6, &quot;y&quot;: 80.5, &quot;date&quot;: &quot;4/29&quot;, &quot;value&quot;: &quot;₩6,733,774&quot;}, {&quot;x&quot;: 294.8, &quot;y&quot;: 124.8, &quot;date&quot;: &quot;4/30&quot;, &quot;value&quot;: &quot;₩2,317,122&quot;}, {&quot;x&quot;: 334.1, &quot;y&quot;: 117.3, &quot;date&quot;: &quot;5/1&quot;, &quot;value&quot;: &quot;₩3,067,475&quot;}, {&quot;x&quot;: 373.3, &quot;y&quot;: 136.6, &quot;date&quot;: &quot;5/2&quot;, &quot;value&quot;: &quot;₩1,140,753&quot;}, {&quot;x&quot;: 412.6, &quot;y&quot;: 101.0, &quot;date&quot;: &quot;5/3&quot;, &quot;value&quot;: &quot;₩4,691,880&quot;}, {&quot;x&quot;: 451.9, &quot;y&quot;: 109.6, &quot;date&quot;: &quot;5/4&quot;, &quot;value&quot;: &quot;₩3,834,554&quot;}, {&quot;x&quot;: 491.1, &quot;y&quot;: 117.5, &quot;date&quot;: &quot;5/5&quot;, &quot;value&quot;: &quot;₩3,040,880&quot;}, {&quot;x&quot;: 530.4, &quot;y&quot;: 106.6, &quot;date&quot;: &quot;5/6&quot;, &quot;value&quot;: &quot;₩4,136,115&quot;}, {&quot;x&quot;: 569.6, &quot;y&quot;: 116.4, &quot;date&quot;: &quot;5/7&quot;, &quot;value&quot;: &quot;₩3,149,668&quot;}, {&quot;x&quot;: 608.9, &quot;y&quot;: 126.5, &quot;date&quot;: &quot;5/8&quot;, &quot;value&quot;: &quot;₩2,150,091&quot;}, {&quot;x&quot;: 648.1, &quot;y&quot;: 98.0, &quot;date&quot;: &quot;5/9&quot;, &quot;value&quot;: &quot;₩4,994,626&quot;}, {&quot;x&quot;: 687.4, &quot;y&quot;: 133.2, &quot;date&quot;: &quot;5/10&quot;, &quot;value&quot;: &quot;₩1,473,005&quot;}, {&quot;x&quot;: 726.7, &quot;y&quot;: 24.0, &quot;date&quot;: &quot;5/11&quot;, &quot;value&quot;: &quot;₩12,380,420&quot;}, {&quot;x&quot;: 765.9, &quot;y&quot;: 135.5, &quot;date&quot;: &quot;5/12&quot;, &quot;value&quot;: &quot;₩1,251,353&quot;}, {&quot;x&quot;: 805.2, &quot;y&quot;: 131.1, &quot;date&quot;: &quot;5/13&quot;, &quot;value&quot;: &quot;₩1,689,980&quot;}, {&quot;x&quot;: 844.4, &quot;y&quot;: 124.9, &quot;date&quot;: &quot;5/14&quot;, &quot;value&quot;: &quot;₩2,304,022&quot;}, {&quot;x&quot;: 883.7, &quot;y&quot;: 120.1, &quot;date&quot;: &quot;5/15&quot;, &quot;value&quot;: &quot;₩2,784,711&quot;}, {&quot;x&quot;: 923.0, &quot;y&quot;: 126.6, &quot;date&quot;: &quot;5/16&quot;, &quot;value&quot;: &quot;₩2,136,683&quot;}, {&quot;x&quot;: 962.2, &quot;y&quot;: 124.1, &quot;date&quot;: &quot;5/17&quot;, &quot;value&quot;: &quot;₩2,381,559&quot;}, {&quot;x&quot;: 1001.5, &quot;y&quot;: 99.6, &quot;date&quot;: &quot;5/18&quot;, &quot;value&quot;: &quot;₩4,830,506&quot;}, {&quot;x&quot;: 1040.7, &quot;y&quot;: 104.1, &quot;date&quot;: &quot;5/19&quot;, &quot;value&quot;: &quot;₩4,379,360&quot;}, {&quot;x&quot;: 1080.0, &quot;y&quot;: 89.7, &quot;date&quot;: &quot;5/20&quot;, &quot;value&quot;: &quot;₩5,822,401&quot;}]" data-label="Revenue" data-color="#6f5fff"><path d="M 20.0,120.5 L 59.3,106.0 L 98.5,93.7 L 137.8,112.6 L 177.0,16.0 L 216.3,143.3 L 255.6,80.5 L 294.8,124.8 L 334.1,117.3 L 373.3,136.6 L 412.6,101.0 L 451.9,109.6 L 491.1,117.5 L 530.4,106.6 L 569.6,116.4 L 608.9,126.5 L 648.1,98.0 L 687.4,133.2 L 726.7,24.0 L 765.9,135.5 L 805.2,131.1 L 844.4,124.9 L 883.7,120.1 L 923.0,126.6 L 962.2,124.1 L 1001.5,99.6 L 1040.7,104.1 L 1080.0,89.7 L 1080.0,148.0 L 20.0,148.0 Z" fill="#6f5fff" fill-opacity="0.06"/><path d="M 20.0,120.5 L 59.3,106.0 L 98.5,93.7 L 137.8,112.6 L 177.0,16.0 L 216.3,143.3 L 255.6,80.5 L 294.8,124.8 L 334.1,117.3 L 373.3,136.6 L 412.6,101.0 L 451.9,109.6 L 491.1,117.5 L 530.4,106.6 L 569.6,116.4 L 608.9,126.5 L 648.1,98.0 L 687.4,133.2 L 726.7,24.0 L 765.9,135.5 L 805.2,131.1 L 844.4,124.9 L 883.7,120.1 L 923.0,126.6 L 962.2,124.1 L 1001.5,99.6 L 1040.7,104.1 L 1080.0,89.7" fill="none" stroke="#6f5fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="1080.0" cy="89.7" r="4" fill="#6f5fff"/><line class="hover-guide" x1="0" x2="0" y1="16" y2="148" stroke="#6f5fff" stroke-width="1" stroke-dasharray="3,3" opacity="0"/><circle class="hover-dot" cx="0" cy="0" r="5" fill="#6f5fff" stroke="white" stroke-width="2" opacity="0"/><text x="20.0" y="172" text-anchor="middle" class="chart-axis-label">4/23</text><text x="569.6" y="172" text-anchor="middle" class="chart-axis-label">5/7</text><text x="1080.0" y="172" text-anchor="middle" class="chart-axis-label">5/20</text><text x="20" y="16" class="chart-axis-label">max ₩13,176,246</text></svg>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>iOS</h2>
+          <span class="pill">v1.4.13</span>
+        </div>
+        <div class="section-tag">PLATFORM</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th class="">5/17</th><th class="">5/18</th><th class="">5/19</th><th class="">5/20</th><th class="future">5/21</th><th class="future">5/22</th><th class="future">5/23</th></tr></thead>
+          <tbody><tr><th class="row-label">DAU</th><td>502<span class="vs-prev down">▼5%</span></td><td>536<span class="vs-prev up">▲9%</span></td><td>511<span class="vs-prev down">▼8%</span></td><td>529<span class="vs-prev up">▲12%</span></td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">크래시율</th><td>0.20%</td><td>0.18%</td><td>0.00%</td><td>0.00%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">영향 사용자</th><td>1</td><td>1</td><td>0</td><td>0</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">평점(누적)</th><td>4.9<span class='unit'>· 516</span></td><td>4.9<span class='unit'>· 516</span></td><td>4.9<span class='unit'>· 516</span></td><td>4.9<span class='unit'>· 516</span></td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">첫 실행</th><td>216</td><td>231</td><td>231</td><td>236</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    
+    
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Android</h2>
+          <span class="pill">v1.4.16</span>
+        </div>
+        <div class="section-tag">PLATFORM</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th class="">5/17</th><th class="">5/18</th><th class="">5/19</th><th class="">5/20</th><th class="future">5/21</th><th class="future">5/22</th><th class="future">5/23</th></tr></thead>
+          <tbody><tr><th class="row-label">DAU</th><td>373<span class="vs-prev flat">·0%</span></td><td>386<span class="vs-prev up">▲2%</span></td><td>376<span class="vs-prev up">▲1%</span></td><td>381<span class="vs-prev up">▲6%</span></td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">크래시율</th><td>0.24%</td><td>0.70%</td><td>0.00%</td><td>1.17%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">영향 사용자</th><td>1</td><td>3</td><td>0</td><td>5</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">평점(누적)</th><td>5.0<span class='unit'>· 822</span></td><td>5.0<span class='unit'>· 823</span></td><td>5.0<span class='unit'>· 823</span></td><td>5.0<span class='unit'>· 823</span></td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">첫 실행</th><td>163</td><td>159</td><td>169</td><td>176</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    
+    
+    <section class="section">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Revenue</h2>
+        </div>
+        <div class="section-tag">SALES</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th class="">5/17</th><th class="">5/18</th><th class="">5/19</th><th class="">5/20</th><th class="future">5/21</th><th class="future">5/22</th><th class="future">5/23</th></tr></thead>
+          <tbody><tr><th class="row-label">총예약 (건)</th><td>11</td><td>19</td><td>14</td><td>19</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">총예약 (원)</th><td>2,381,559</td><td>4,770,506</td><td>4,477,600</td><td>5,762,401</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">취소 (건)</th><td>0</td><td>0</td><td>2</td><td>0</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">취소 (원)</th><td>0</td><td>0</td><td>158,240</td><td>0</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr class="derived"><th class="row-label">취소율</th><td>0.0%<span class="vs-prev up">▼38.5%p</span></td><td>0.0%<span class="vs-prev up">▼5.9%p</span></td><td>14.3%<span class="vs-prev up">▼5.7%p</span></td><td>0.0%<span class="vs-prev up">▼13.3%p</span></td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">링크페이 (건)</th><td>0</td><td>2</td><td>2</td><td>2</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">링크페이 (원)</th><td>0</td><td>60,000</td><td>60,000</td><td>60,000</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">총매출 (건)</th><td>11<span class="vs-prev up">▲38%</span></td><td>19<span class="vs-prev up">▲19%</span></td><td>12<span class="vs-prev up">▲50%</span></td><td>19<span class="vs-prev up">▲46%</span></td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr><th class="row-label">총매출 (원)</th><td>2,381,559<span class="vs-prev up">▲62%</span></td><td>4,830,506<span class="vs-prev down">▼61%</span></td><td>4,379,360<span class="vs-prev up">▲250%</span></td><td>5,822,401<span class="vs-prev up">▲245%</span></td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr><tr class="derived"><th class="row-label">객단가 (원)</th><td>216,505</td><td>254,237</td><td>364,946</td><td>306,442</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td></tr></tbody>
+        </table>
+      </div>
+      <div class="section-note">
+        <span class="section-note-label">순예약(누적) · 내국인 / 외국인 / 기타</span>
+        <span class="section-note-value">53 (87%) / 8 (13%) / 0 (0%)</span>
+      </div>
+    </section>
+    
+
+    <footer class="footer">
+      <span class="footer-mark"></span>
+      Generated · 2026.05.21 (목)
+    </footer>
+  </main>
+
+  <script>
+    // 전주 비교 토글
+    (function() {
+      var btn = document.querySelector('.vs-toggle');
+      if (!btn) return;
+      btn.addEventListener('click', function() {
+        var on = document.body.classList.toggle('show-vs-prev');
+        btn.textContent = on ? '전주 비교 숨기기' : '전주와 비교';
+        btn.classList.toggle('active', on);
+      });
+    })();
+
+    // 차트 hover tooltip
+    (function() {
+      var tooltip = document.createElement('div');
+      tooltip.className = 'chart-tooltip';
+      document.body.appendChild(tooltip);
+
+      document.querySelectorAll('svg.sparkline').forEach(function(svg) {
+        var points;
+        try { points = JSON.parse(svg.getAttribute('data-points')); }
+        catch (e) { return; }
+        if (!points || !points.length) return;
+
+        var label = svg.getAttribute('data-label') || '';
+        var color = svg.getAttribute('data-color') || '#111';
+        var guide = svg.querySelector('.hover-guide');
+        var dot = svg.querySelector('.hover-dot');
+        var viewBox = svg.viewBox.baseVal;
+
+        function findNearest(xVB) {
+          var nearest = points[0];
+          var nearestDist = Math.abs(nearest.x - xVB);
+          for (var i = 1; i < points.length; i++) {
+            var d = Math.abs(points[i].x - xVB);
+            if (d < nearestDist) { nearest = points[i]; nearestDist = d; }
+          }
+          return nearest;
+        }
+
+        svg.addEventListener('mousemove', function(e) {
+          var rect = svg.getBoundingClientRect();
+          var xPx = e.clientX - rect.left;
+          var xVB = xPx / rect.width * viewBox.width;
+          var p = findNearest(xVB);
+
+          guide.setAttribute('x1', p.x);
+          guide.setAttribute('x2', p.x);
+          guide.setAttribute('opacity', '1');
+          dot.setAttribute('cx', p.x);
+          dot.setAttribute('cy', p.y);
+          dot.setAttribute('opacity', '1');
+
+          tooltip.innerHTML =
+            '<div class="tt-label" style="color:' + color + '">' + label + '</div>' +
+            '<div class="tt-date">' + p.date + '</div>' +
+            '<div class="tt-value">' + p.value + '</div>';
+          tooltip.style.display = 'block';
+
+          // tooltip 위치: 마우스 우상단, 화면 밖으로 안 나가게
+          var ttRect = tooltip.getBoundingClientRect();
+          var left = e.clientX + 14;
+          var top = e.clientY - ttRect.height - 12;
+          if (left + ttRect.width > window.innerWidth - 8) {
+            left = e.clientX - ttRect.width - 14;
+          }
+          if (top < 8) {
+            top = e.clientY + 18;
+          }
+          tooltip.style.left = left + 'px';
+          tooltip.style.top = top + 'px';
+        });
+
+        svg.addEventListener('mouseleave', function() {
+          guide.setAttribute('opacity', '0');
+          dot.setAttribute('opacity', '0');
+          tooltip.style.display = 'none';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
