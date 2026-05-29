@@ -2,6 +2,24 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t전용앱이 있어 호텔 투숙 전 호텔에 대해 알 수 있었습니다",
+    "author": "Kyoungjin Cho",
+    "date": "2026-05-29T12:14:00",
+    "version": "",
+    "device": "Galaxy S22+"
+  },
+  {
+    "rating": 5,
+    "title": "",
+    "body": "\t위치와 경치가 좋은 곳에서 좋은 추억 만들었어요! 다음에 또 이용할 계획입니다",
+    "author": "노짱구",
+    "date": "2026-05-29T12:13:29",
+    "version": "",
+    "device": "Galaxy Note20 5G"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t실내가 깔끔하고 저렴해서 좋았어요ㅎㅎ 자주 이용할 것 같습니다~",
     "author": "장우경",
     "date": "2026-05-27T12:46:52",
@@ -16,14 +34,5 @@
     "date": "2026-05-26T16:44:35",
     "version": "1.4.18",
     "device": "Galaxy S24"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t인터페이스가 깔끔하고 사용하기 쉽게 구성되어 있습니다",
-    "author": "권진현",
-    "date": "2026-05-22T10:31:26",
-    "version": "1.4.17",
-    "device": "Galaxy S25+"
   }
 ]
