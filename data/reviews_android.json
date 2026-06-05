@@ -2,6 +2,15 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t전용앱으로 예약하고 문의할수있어 좋아요!",
+    "author": "Mjuice",
+    "date": "2026-06-04T17:38:49",
+    "version": "1.5.0",
+    "device": "Galaxy S25"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t잘 사용하고 있습니다.",
     "author": "ddaramong *",
     "date": "2026-06-03T22:58:00",
@@ -25,23 +34,5 @@
     "date": "2026-06-03T14:23:25",
     "version": "",
     "device": "Galaxy S24 Ultra"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t전용앱이 있어 호텔 투숙 전 호텔에 대해 알 수 있었습니다",
-    "author": "Kyoungjin Cho",
-    "date": "2026-05-29T12:14:00",
-    "version": "",
-    "device": "Galaxy S22+"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t위치와 경치가 좋은 곳에서 좋은 추억 만들었어요! 다음에 또 이용할 계획입니다",
-    "author": "노짱구",
-    "date": "2026-05-29T12:13:29",
-    "version": "",
-    "device": "Galaxy Note20 5G"
   }
 ]
