@@ -2,6 +2,15 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t쿠폰도 많고 사용하기 편합니다",
+    "author": "HYUNWOO YU",
+    "date": "2026-07-21T09:12:53",
+    "version": "2.0.0",
+    "device": "Galaxy S26 Ultra"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t너무좋았어요",
     "author": "조인하",
     "date": "2026-07-16T18:49:35",
@@ -16,23 +25,5 @@
     "date": "2026-07-14T15:38:29",
     "version": "1.5.4",
     "device": "Redmi Note 12 Pro+ 5G"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t디자인이 무척 훌륭합니다",
-    "author": "Ikchang Lee",
-    "date": "2026-07-14T13:11:19",
-    "version": "1.5.4",
-    "device": "Galaxy S25 Ultra"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t사용 하기 편하게 되있네요",
-    "author": "장태준1",
-    "date": "2026-07-14T12:04:41",
-    "version": "1.5.4",
-    "device": "Galaxy S23 Ultra"
   }
 ]
