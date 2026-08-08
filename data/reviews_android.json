@@ -2,6 +2,24 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t바다가 보이는 깨끗하고 편리한 아파트에서 우리 가족만의 프라이빗한 휴식과 여행을 즐길 수 있었습니다. 다음에 다른 지역에서도 UH에 머물러 보고 싶어요.",
+    "author": "listening man",
+    "date": "2026-08-08T07:37:54",
+    "version": "2.0.3",
+    "device": "Galaxy S10 5G"
+  },
+  {
+    "rating": 5,
+    "title": "",
+    "body": "\tUH플랫 앱 강추요^^ 좋습니다.",
+    "author": "Seung Hee Baek",
+    "date": "2026-08-07T17:41:30",
+    "version": "2.0.3",
+    "device": "Galaxy S26"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t앱이 정말 사용하기 편리하게 잘 되어있어서 예약하기 시웠던 거 같습니다. 덕분에 즐거운 여행이었고 다음 여행도 너무 기대가 된답니다.",
     "author": "최설희",
     "date": "2026-08-06T15:41:43",
@@ -124,14 +142,5 @@
     "date": "2026-08-02T13:49:32",
     "version": "2.0.2",
     "device": "Galaxy Z Flip7"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\tthank you",
-    "author": "한글은멋져요",
-    "date": "2026-07-31T21:04:23",
-    "version": "2.0.2",
-    "device": "Galaxy Z Fold6"
   }
 ]
