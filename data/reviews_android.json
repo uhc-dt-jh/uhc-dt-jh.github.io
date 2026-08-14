@@ -2,6 +2,15 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t좋아요~",
+    "author": "한빈",
+    "date": "2026-08-14T12:17:34",
+    "version": "2.0.3",
+    "device": "Galaxy S23+"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t아주 유익한 앱!",
     "author": "송성근",
     "date": "2026-08-13T09:53:13",
@@ -79,77 +88,5 @@
     "date": "2026-08-07T17:41:30",
     "version": "2.0.3",
     "device": "Galaxy S26"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t앱이 정말 사용하기 편리하게 잘 되어있어서 예약하기 시웠던 거 같습니다. 덕분에 즐거운 여행이었고 다음 여행도 너무 기대가 된답니다.",
-    "author": "최설희",
-    "date": "2026-08-06T15:41:43",
-    "version": "",
-    "device": "LG V50 ThinQ"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t지점별 혜택확인이 편하네요.",
-    "author": "김영우",
-    "date": "2026-08-06T14:52:20",
-    "version": "2.0.2",
-    "device": "Galaxy S26 Ultra"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t처음 숙박했는데 무인이라 편리했고 너무 만족합니다. 위치도 좋고 주차도 좋아요",
-    "author": "여나윤",
-    "date": "2026-08-06T14:08:00",
-    "version": "2.0.2",
-    "device": "Galaxy Z Fold5"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t숙소 예약도 편하고 좋아요",
-    "author": "명영",
-    "date": "2026-08-06T13:23:35",
-    "version": "2.0.2",
-    "device": "Galaxy S20 Ultra 5G"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t가입도 빠르고 호텔 할인이랑 찾기 쉽고 좋아요",
-    "author": "강나연",
-    "date": "2026-08-06T13:20:07",
-    "version": "2.0.2",
-    "device": "Galaxy S25 Ultra"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t회원가입을 하니 쿠폰도 주고 이런저런 이벤트도 있고 해서 아주 저렴하게 잘 예약할 수 있을 거 같아요. 지금 샅샅이 둘러보고 있는데 다 시설이 너무 좋네요. 👍",
-    "author": "유니유니 (유니유니)",
-    "date": "2026-08-06T13:15:09",
-    "version": "2.0.2",
-    "device": "Galaxy Note10+ 5G"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t너무 편리하고 유용합니다.",
-    "author": "k kh",
-    "date": "2026-08-06T13:12:39",
-    "version": "2.0.2",
-    "device": "Galaxy S22"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t이번 휴가에 속초로 가려고 예약중비중에 방문하게 되었습니다. 덕분에 편하게 이용할 거 같아요. 리뷰도 다 좋아서 걱정 접었네요.",
-    "author": "최태술",
-    "date": "2026-08-06T12:50:50",
-    "version": "2.0.2",
-    "device": "Galaxy S21 5G"
   }
 ]
