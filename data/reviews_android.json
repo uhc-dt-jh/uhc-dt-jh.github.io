@@ -2,6 +2,24 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\tUH 플랫 더 속초 지점에 묵었는데 편리하게 앱으로 더 많은 플랫폼을 즐길수있게되었다니 너무 반가운 소식이에요:) 앞으로 자주 이용할것같아요:) 강추!!",
+    "author": "Chris Jang",
+    "date": "2026-08-14T22:11:47",
+    "version": "2.0.3",
+    "device": "Galaxy S25 Ultra"
+  },
+  {
+    "rating": 5,
+    "title": "",
+    "body": "\tuh 숙소 깨끗하고 관리가 잘되있는 편이라 자주 이용하는 편인데 앱이 생겨서 넘좋고 전국 숙소를 한곳에서 찾아볼수있어서 좋네요. 다음여행때는 이 앱을 통해 예약해봐야겠어요",
+    "author": "설여사",
+    "date": "2026-08-14T13:07:11",
+    "version": "",
+    "device": "Galaxy S22"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t좋아요~",
     "author": "한빈",
     "date": "2026-08-14T12:17:34",
@@ -70,23 +88,5 @@
     "date": "2026-08-08T12:15:18",
     "version": "2.0.3",
     "device": "Galaxy Z Flip6"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t바다가 보이는 깨끗하고 편리한 아파트에서 우리 가족만의 프라이빗한 휴식과 여행을 즐길 수 있었습니다. 다음에 다른 지역에서도 UH에 머물러 보고 싶어요.",
-    "author": "listening man",
-    "date": "2026-08-08T07:37:54",
-    "version": "2.0.3",
-    "device": "Galaxy S10 5G"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\tUH플랫 앱 강추요^^ 좋습니다.",
-    "author": "Seung Hee Baek",
-    "date": "2026-08-07T17:41:30",
-    "version": "2.0.3",
-    "device": "Galaxy S26"
   }
 ]
