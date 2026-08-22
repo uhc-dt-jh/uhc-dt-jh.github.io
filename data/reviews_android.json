@@ -2,6 +2,24 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t보기 편한ui 자주 이용할꺼같아요!",
+    "author": "심주현",
+    "date": "2026-08-21T21:23:35",
+    "version": "2.0.4",
+    "device": "Galaxy S26"
+  },
+  {
+    "rating": 5,
+    "title": "",
+    "body": "\t속초 다녀왔어요. 지하주차장 잘 되어 있고 중앙시장하고 가까워서 좋았어요. 숙소도 깨끗하고 쾌적했어요 다시 올게요. 오션뷰 굿입니다.",
+    "author": "Marchellino Jeong",
+    "date": "2026-08-21T12:59:19",
+    "version": "2.0.4",
+    "device": "Galaxy S22 Ultra"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t어플이 있어 되게 편리합니다",
     "author": "김동규",
     "date": "2026-08-21T10:05:57",
@@ -79,32 +97,5 @@
     "date": "2026-08-16T16:25:56",
     "version": "2.0.3",
     "device": "Galaxy S26 Ultra"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\tUH 플랫 더 속초 지점에 묵었는데 편리하게 앱으로 더 많은 플랫폼을 즐길수있게되었다니 너무 반가운 소식이에요:) 앞으로 자주 이용할것같아요:) 강추!!",
-    "author": "Chris Jang",
-    "date": "2026-08-14T22:11:47",
-    "version": "2.0.3",
-    "device": "Galaxy S25 Ultra"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\tuh 숙소 깨끗하고 관리가 잘되있는 편이라 자주 이용하는 편인데 앱이 생겨서 넘좋고 전국 숙소를 한곳에서 찾아볼수있어서 좋네요. 다음여행때는 이 앱을 통해 예약해봐야겠어요",
-    "author": "설여사",
-    "date": "2026-08-14T13:07:11",
-    "version": "",
-    "device": "Galaxy S22"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t좋아요~",
-    "author": "한빈",
-    "date": "2026-08-14T12:17:34",
-    "version": "2.0.3",
-    "device": "Galaxy S23+"
   }
 ]
