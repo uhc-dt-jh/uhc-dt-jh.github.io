@@ -2,6 +2,15 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t예약어플이 정말 편하네요.",
+    "author": "박세용",
+    "date": "2026-08-23T13:45:49",
+    "version": "",
+    "device": "Galaxy S25 Ultra"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t보기 편한ui 자주 이용할꺼같아요!",
     "author": "심주현",
     "date": "2026-08-21T21:23:35",
@@ -79,23 +88,5 @@
     "date": "2026-08-17T11:24:51",
     "version": "",
     "device": "Galaxy S24+"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t잘 사용하고있습니다 😀",
-    "author": "수연이",
-    "date": "2026-08-17T11:13:19",
-    "version": "2.0.3",
-    "device": "Galaxy Z Fold7"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t숙소도 깔끔하고 이용하기 편해서 만족했습니다. 앱으로 체크인과 숙소 이용 정보를 확인할 수 있어서 편리했고, 전반적으로 빠르고 사용하기 쉬웠어요. 가족여행으로 이용하기에도 좋았고 다음에 송도에 오게 되면 다시 이용하고 싶습니다. 추천합니다!",
-    "author": "fringe dev",
-    "date": "2026-08-16T16:25:56",
-    "version": "2.0.3",
-    "device": "Galaxy S26 Ultra"
   }
 ]

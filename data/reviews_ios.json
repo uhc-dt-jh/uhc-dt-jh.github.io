@@ -1,6 +1,22 @@
 [
   {
     "rating": 5,
+    "title": "Great value",
+    "body": "It was a very last minute booking but the process was flawless and the room was clean and bigger than I expected.",
+    "author": "NathanP81",
+    "date": "2026-08-21T21:24:02-07:00",
+    "version": ""
+  },
+  {
+    "rating": 5,
+    "title": "깔끔한 앱",
+    "body": "앱에서 잘 정리되어있어거 예약하기 편해요",
+    "author": "Minnnn12345",
+    "date": "2026-08-21T18:07:14-07:00",
+    "version": ""
+  },
+  {
+    "rating": 5,
     "title": "추천합니다",
     "body": "위치도 좋고 룸컨디션도 좋고 직원들도 친절해서 추천합니다!",
     "author": "포도1384",
@@ -781,22 +797,6 @@
     "body": "문의에 대한 응대도 빠르고 너무 친절하십니다 ㅎㅎ 쿠폰 발급 받아 합리적인 가격에 숙소 예약했어요! 아직 숙소 이용 전이지만 예약 과정부터 만족스러워서 기대가 많이 됩니다 ㅎㅎ",
     "author": "H_Bhb",
     "date": "2026-01-13T23:05:30-08:00",
-    "version": ""
-  },
-  {
-    "rating": 5,
-    "title": "uh플랫 속초 이용했는데",
-    "body": "uh플랫 속초 이용했는데 완전 만족스러웠어요. 속초시장 도보로 5분이면 갈 수 있는점이 가장 좋았고, 가성비도 좋은데 깔끔하게 관리되고 있어서 푹 쉬다가 왔습니다!",
-    "author": "현명한여우",
-    "date": "2026-01-13T20:16:18-08:00",
-    "version": ""
-  },
-  {
-    "rating": 5,
-    "title": "여행",
-    "body": "정말 너무 좋았습니다! 잘 묵고 갑니다 ~~!",
-    "author": "콩🌷",
-    "date": "2026-01-13T19:43:09-08:00",
     "version": ""
   }
 ]
