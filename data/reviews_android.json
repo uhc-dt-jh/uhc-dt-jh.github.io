@@ -2,6 +2,15 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t좋아요~!!",
+    "author": "W",
+    "date": "2026-08-30T12:54:40",
+    "version": "2.0.5",
+    "device": "Galaxy Z Fold8"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\tUHC전용앱이 있어서 편리하네요.",
     "author": "Ju Young Pak",
     "date": "2026-08-29T15:47:51",
@@ -70,14 +79,5 @@
     "date": "2026-08-24T11:57:38",
     "version": "2.0.4",
     "device": "Galaxy S26 Ultra"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t예약어플이 정말 편하네요.",
-    "author": "박세용",
-    "date": "2026-08-23T13:45:49",
-    "version": "",
-    "device": "Galaxy S25 Ultra"
   }
 ]
