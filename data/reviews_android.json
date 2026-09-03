@@ -2,6 +2,15 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t방 분위기며 컨디션 접근성 가격대비 만족도가 정말 좋았습니다 중앙시장이랑 가까워 음식포장해서 포차 컨셉 방에서 오션뷰보며 먹으니 너무 좋았습니다",
+    "author": "insik son",
+    "date": "2026-09-03T11:00:22",
+    "version": "2.0.5",
+    "device": "Galaxy S25+"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t속초와 오시리아에 있는 곳들 숙박했었는데 정말 너무 좋았습니다! 위치도 좋고 무엇보다 넓고 깔끔한거! 그리구 냉장고가 커서 진짜 좋았어요~!",
     "author": "빈쯔",
     "date": "2026-09-02T10:27:12",
@@ -52,23 +61,5 @@
     "date": "2026-08-27T20:23:34",
     "version": "",
     "device": "Galaxy S24 Ultra"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t또 가고싶은 호텔 또 가야하는 호텔",
-    "author": "전종훈",
-    "date": "2026-08-26T21:58:42",
-    "version": "",
-    "device": "Galaxy S26 Ultra"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t앱 좋네요~ 다음엔 앱으로 할인받고 예약해야겠어요~",
-    "author": "GOWOON LEE",
-    "date": "2026-08-26T14:30:15",
-    "version": "2.0.5",
-    "device": "Galaxy S22"
   }
 ]
