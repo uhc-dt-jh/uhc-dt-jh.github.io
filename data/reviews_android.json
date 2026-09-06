@@ -2,6 +2,15 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t앱이생겨서 너무편리합니다.",
+    "author": "김세훈",
+    "date": "2026-09-05T15:39:56",
+    "version": "2.0.5",
+    "device": "Galaxy Z Flip3 5G"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t방 분위기며 컨디션 접근성 가격대비 만족도가 정말 좋았습니다 중앙시장이랑 가까워 음식포장해서 포차 컨셉 방에서 오션뷰보며 먹으니 너무 좋았습니다",
     "author": "insik son",
     "date": "2026-09-03T11:00:22",
@@ -34,23 +43,5 @@
     "date": "2026-08-31T09:03:49",
     "version": "2.0.5",
     "device": "心系天下 三星 W26"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t좋아요~!!",
-    "author": "W",
-    "date": "2026-08-30T12:54:40",
-    "version": "2.0.5",
-    "device": "Galaxy Z Fold8"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\tUHC전용앱이 있어서 편리하네요.",
-    "author": "Ju Young Pak",
-    "date": "2026-08-29T15:47:51",
-    "version": "",
-    "device": "Galaxy S10 5G"
   }
 ]
