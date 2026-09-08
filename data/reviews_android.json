@@ -2,6 +2,24 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t속초다녀왔는데, 숙소 좋았습니다.",
+    "author": "강병주",
+    "date": "2026-09-08T11:31:42",
+    "version": "2.0.5",
+    "device": "Galaxy S26 Ultra"
+  },
+  {
+    "rating": 5,
+    "title": "",
+    "body": "\t어플 사용하기 편해요. 속초 숙소도 사용했는데 너무 만족했습니다.",
+    "author": "김성주",
+    "date": "2026-09-08T11:31:39",
+    "version": "2.0.5",
+    "device": "Galaxy S26+"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t앱이생겨서 너무편리합니다.",
     "author": "김세훈",
     "date": "2026-09-05T15:39:56",
@@ -25,14 +43,5 @@
     "date": "2026-09-02T10:27:12",
     "version": "2.0.5",
     "device": "Galaxy S26"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t속초여행 올 때마다 UH에서 머물러요 위치도 너무 좋고, 룸도 깨끗하고, 심플해서 좋아요",
-    "author": "타기쌤",
-    "date": "2026-09-01T12:29:11",
-    "version": "2.0.5",
-    "device": "Galaxy Z Flip5"
   }
 ]
