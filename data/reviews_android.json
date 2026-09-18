@@ -2,6 +2,24 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t좋습니다 추천합니다",
+    "author": "진성용",
+    "date": "2026-09-18T12:41:57",
+    "version": "2.0.9",
+    "device": "Galaxy Note20 Ultra 5G"
+  },
+  {
+    "rating": 5,
+    "title": "",
+    "body": "\t공식앱 나와서 너무 편리하고 빠르고 좋습니다!!",
+    "author": "Ty S",
+    "date": "2026-09-18T10:12:03",
+    "version": "2.0.9",
+    "device": "Galaxy S24"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t포차스탈 룸에서 이쁜 포토 많이 남겼어요 다만 협소하니 커플에게 추천합니다",
     "author": "Orange Gull",
     "date": "2026-09-16T13:39:07",
@@ -43,14 +61,5 @@
     "date": "2026-09-13T14:19:32",
     "version": "2.0.5",
     "device": "Galaxy Z Flip6"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t사용하기 편리하고, 다른 정보도 많이 있습니다!! 해보세요~~~^^",
-    "author": "문수혁",
-    "date": "2026-09-11T11:22:32",
-    "version": "2.0.5",
-    "device": "Galaxy S26+"
   }
 ]
