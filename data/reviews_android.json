@@ -2,6 +2,33 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t다른사이트보다 착한가격으로 예약 가능하고 좋습니다.",
+    "author": "김혜미",
+    "date": "2026-10-03T12:44:18",
+    "version": "2.0.11",
+    "device": "Galaxy S26"
+  },
+  {
+    "rating": 5,
+    "title": "",
+    "body": "\t전용앱이 있어 편리합니다",
+    "author": "김은주",
+    "date": "2026-10-03T12:29:24",
+    "version": "2.0.11",
+    "device": "Galaxy S23 Ultra"
+  },
+  {
+    "rating": 5,
+    "title": "",
+    "body": "\t합리적인 숙소를 만나느 방법",
+    "author": "김성근",
+    "date": "2026-10-03T09:42:57",
+    "version": "2.0.11",
+    "device": "Galaxy S26 Ultra"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t전용앱이라 편해요",
     "author": "Dragon Genius",
     "date": "2026-09-29T12:50:53",
@@ -25,14 +52,5 @@
     "date": "2026-09-26T16:52:34",
     "version": "2.0.10",
     "device": "Galaxy S24"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t전용어플이 있어서 편하고 체크인 체크아웃 따로 안해서 편리하고 좋습니다 방컨디션도 깔끔하고 좋아서 자주이용하려구요",
-    "author": "joji ken",
-    "date": "2026-09-25T15:54:45",
-    "version": "2.0.10",
-    "device": "Galaxy Z Flip5"
   }
 ]
