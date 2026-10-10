@@ -2,6 +2,24 @@
   {
     "rating": 5,
     "title": "",
+    "body": "\t여행 계획 시 유용해요!",
+    "author": "신경희",
+    "date": "2026-10-10T12:55:43",
+    "version": "",
+    "device": "Galaxy S25"
+  },
+  {
+    "rating": 5,
+    "title": "",
+    "body": "\t시설.위치.가격..을 알아보기 쉽게 되어있어서 편리하게 사용할수있어요",
+    "author": "김시은",
+    "date": "2026-10-10T12:02:04",
+    "version": "2.0.12",
+    "device": "Galaxy S24"
+  },
+  {
+    "rating": 5,
+    "title": "",
     "body": "\t앱 좋아요 좋아요",
     "author": "이현민",
     "date": "2026-10-08T12:20:08",
@@ -52,32 +70,5 @@
     "date": "2026-10-05T21:26:48",
     "version": "",
     "device": "Galaxy S21+ 5G"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t다른사이트보다 착한가격으로 예약 가능하고 좋습니다.",
-    "author": "김혜미",
-    "date": "2026-10-03T12:44:18",
-    "version": "2.0.11",
-    "device": "Galaxy S26"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t전용앱이 있어 편리합니다",
-    "author": "김은주",
-    "date": "2026-10-03T12:29:24",
-    "version": "2.0.11",
-    "device": "Galaxy S23 Ultra"
-  },
-  {
-    "rating": 5,
-    "title": "",
-    "body": "\t합리적인 숙소를 만나느 방법",
-    "author": "김성근",
-    "date": "2026-10-03T09:42:57",
-    "version": "2.0.11",
-    "device": "Galaxy S26 Ultra"
   }
 ]
